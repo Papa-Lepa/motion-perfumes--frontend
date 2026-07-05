@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Catalog</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 align="center">Perfume Catalog</h1>
+    </header>
+
+    <main>
+        <section class="perfume-list">
+            <table>
+                <tr>
+                    <td>
+                        <div class="perfume-item">
+                            <img src="C:\Users\ryanp\OneDrive\Desktop\Notes\CNS 2.1\Web programming\Motion perfumes\Armaf Club De Nuit Intense Edt 105ml para homem.jpeg" width="200" height="300"  align="center" alt="Club de Nuit Intense Man">
+                            <h2>Club De Nuit Intense Man</h2>
+                            <p>Description of Perfume 1.</p>
+                            <div class="product-actions">
+                                <button id="addToCartBtn" type="button">Add to cart</button>
+                                <a class="button return-home" href="Catalog page.html">Return to home</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <script>
+        const cartButton = document.getElementById('addToCartBtn');
+        let cartCount = 0;
+        cartButton.addEventListener('click', () => {
+            cartCount += 1;
+            alert(`Added to cart. Cart items: ${cartCount}`);
+        });
+    </script>
+</body>
+</html>

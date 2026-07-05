@@ -1,0 +1,132 @@
+/* frontend/src/Footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+.footer {
+  --plum: #3b2440;
+  --plum-deep: #241629;
+  --blush: #e8c4c0;
+  --gold: #c9a15a;
+  --cream: #faf6f3;
+  --muted: rgba(250, 246, 243, 0.55);
+
+  background: var(--plum-deep);
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  padding: 64px 32px 28px;
+  margin-top: 80px;
+  position: relative;
+}
+
+/* thin gradient accent line at the very top of the footer */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.footer-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 720px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.footer-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 26px;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.footer-section h2::before {
+  content: "⟡ ";
+  color: var(--gold);
+}
+
+.footer-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0 0 10px;
+  max-width: 320px;
+}
+
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-section ul li a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.footer-section ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.25s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--gold);
+}
+.footer-section ul li a:hover::after {
+  width: 100%;
+}
+
+.footer hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 1080px;
+  margin: 48px auto 20px;
+}
+
+.footer .copyright {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-section ul li a,
+  .footer-section ul li a::after {
+    transition: none;
+  }
+}
