@@ -66,19 +66,25 @@ function Home() {
       <button>Add to Cart</button>
     </div>
 
-    <div className="best-card">
-      <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80"/>
-      <h3>Versace Eros</h3>
-      <p>kshs 1300 </p>
-      <button>Add to Cart</button>
-    </div>
+ <div className="best-card">
+  <img
+    src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80"
+    alt="Versace Eros perfume bottle"
+  />
+  <h3>Versace Eros</h3>
+  <p>KSh 1,300</p>
+  <button>Add to Cart</button>
+</div>
 
-    <div className="best-card">
-      <img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80"/>
-      <h3>Black Opium</h3>
-      <p>ksh 1400 </p>
-      <button>Add to Cart</button>
-    </div>
+<div className="best-card">
+  <img
+    src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80"
+    alt="Black Opium perfume bottle"
+  />
+  <h3>Black Opium</h3>
+  <p>KSh 1,400</p>
+  <button>Add to Cart</button>
+</div>
 
   </div>
 
