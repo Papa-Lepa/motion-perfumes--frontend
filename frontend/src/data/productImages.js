@@ -5,14 +5,14 @@
 // here. If you add a new perfume in the database, add its image import +
 // a matching entry here too, or it'll render with no image.
 
-import dior from "../images/dior.png";
-import bleu from "../images/bleu.png";
-import versace from "../images/versace.png";
-import blackopium from "../images/blackopium.png";
-import tomford from "../images/tomford.png";
-import coco from "../images/coco.png";
-import gucci from "../images/gucci.png";
-import baccarat from "../images/baccarat.png";
+import dior from "../images/dior.png.png";
+import bleu from "../images/bleu.png.png";
+import versace from "../images/versace.png.png";
+import blackopium from "../images/blackopium.png.png";
+import tomford from "../images/tomford.png.png";
+import coco from "../images/coco.png.png";
+import gucci from "../images/gucci.png.png";
+import baccarat from "../images/baccarat.png.png";
 
 const IMAGE_BY_NAME = {
   "Dior Sauvage": dior,
