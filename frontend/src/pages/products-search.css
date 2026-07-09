@@ -1,0 +1,16 @@
+/* frontend/src/pages/products-search.css */
+.products-search {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 20px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-family: inherit;
+}
+.products-search:focus {
+  outline: none;
+  border-color: #c9a15a;
+}

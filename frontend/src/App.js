@@ -1,5 +1,6 @@
- // frontend/src/App.js
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+// frontend/src/App.js
+import { useState } from "react";
+import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
@@ -22,6 +23,29 @@ function NavCartIcon() {
   );
 }
 
+function NavSearch() {
+  const [value, setValue] = useState("");
+  const navigate = useNavigate();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const trimmed = value.trim();
+    navigate(trimmed ? `/products?search=${encodeURIComponent(trimmed)}` : "/products");
+  }
+
+  return (
+    <form className="search-box" onSubmit={handleSubmit}>
+      <FaSearch className="search-icon" onClick={handleSubmit} />
+      <input
+        type="text"
+        placeholder="Search perfumes..."
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+    </form>
+  );
+}
+
 function AppShell() {
   return (
     <BrowserRouter>
@@ -30,10 +54,7 @@ function AppShell() {
           Motion <span>Perfumes</span>
         </Link>
 
-        <div className="search-box">
-          <FaSearch className="search-icon" />
-          <input type="text" placeholder="Search perfumes..." />
-        </div>
+        <NavSearch />
 
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
@@ -80,8 +101,8 @@ function AppShell() {
           <div className="footer-section">
             <h3>Contact Us</h3>
             <p>📍 Nairobi, Kenya</p>
-            <p>📧 nginai.koileken@strathmore.edu </p>
-            <p>📞 +254 702799738 </p>
+            <p>📧 info@motionperfumes.com</p>
+            <p>📞 +254 700 123 456</p>
           </div>
         </div>
 
